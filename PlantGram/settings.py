@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'Plants',
+    'plants',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Plants.wsgi.application'
+WSGI_APPLICATION = 'PlantGram.wsgi.application'
 
 
 # Database
