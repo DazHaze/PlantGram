@@ -1,1 +1,1 @@
-web: gunicorn Plants.wsgi
+web: gunicorn PlantGram.wsgi
