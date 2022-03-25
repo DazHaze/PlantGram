@@ -15,17 +15,20 @@
         <div class="row flex-d justify-content-center">
             {% for post in posts %}
             <div class="post-card">
-                <p class="post-author">{{ post.author }}</p>
-
-                <img src="{{ post.featured_image.url}}" alt="">
 
                 <div class="card-content">
                     <p>{{ post.caption}}</p>
                 </div>
-
+                <img src="{{ post.author.profile.image.url }}" alt="">
+                <p class="post-author">{{ post.author }}</p>
+                <div class="post-image">
+                    <a href="{% url 'plants:post_detail' post.slug  %}">
+                        <img src="{{ post.featured_image.url}}" class="zoom" alt="">
+                    </a>
+                </div>
                 <div class="card-controls">
                     <div>
-                        <i class="far fa-heart"></i>
+                        <i class="far fa-heart">{{ post.number_of_likes}}</i>
                         <i class="far fa-comment"></i>
                     </div>
                     <p>{{post.created_on}}</p>
