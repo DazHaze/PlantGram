@@ -1,15 +1,16 @@
 from django import forms
-from cloudinary.forms import CloudinaryFileField
-from .models import Profile
+from .models import Post
+from cloudinary.models import CloudinaryField
+from django.contrib.auth.models import User
 
 
-class PhotoForm(forms.ModelForm):
-    class Meta:
-        model = Profile
-        fields = ('image',)
-        image = CloudinaryFileField(
-            options={
-                'tags': "directly_uploaded",
-                'crop': 'limit', 'width': 1000, 'height': 1000,
-                'eager': [{'crop': 'fill', 'width': 150, 'height': 100}]
-            })
+class PostForm(forms.ModelForm):
+	class Meta:
+		model = Post
+		fields = ('caption', 'slug', 'featured_image')
+
+		widgets = {
+			'caption': forms.TextInput(attrs={'class': 'form-control'}),
+			'slug': forms.TextInput(attrs={'class': 'form-control'}),
+            'featured_image': forms.ImageField()
+		}

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.urls import reverse
 
 
 from cloudinary.models import CloudinaryField
@@ -21,6 +22,10 @@ class Post(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+
+    def get_absolute_url(self):
+        return reverse('plants:post_detail', args=[self.slug])
+
 
 
 class Profile(models.Model):

@@ -7,7 +7,7 @@ from django.views.generic import (
     ListView
 )
 from .models import Post
-from .forms import PhotoForm
+from.forms import PostForm
 
 
 class PostListView(ListView):
@@ -37,7 +37,6 @@ class PostDetail(DetailView):
                 "commented": False,
                 "liked": liked,
                 # "comment_form": CommentForm()
-                "photo_form": PhotoForm(),
                 "profile": profile
             },
         )
@@ -89,5 +88,27 @@ class PostLike(View):
 
 class AddPostView(CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'add_post.html'
-    fields = '__all__'
+
+    def post(self, request, *args, **kwargs):
+
+        post_form = PostForm(data=request.POST)
+
+        if post_form.is_valid():
+            post_form.instance.author = request.user
+            postform = post_form.save(commit=False)
+            postform.save()
+        else:
+            post_form = PostForm()
+
+        return render(
+                request,
+                "add_post.html",
+                {
+                    "post_form": PostForm()
+                },
+            )
+
+
+
