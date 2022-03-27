@@ -18,6 +18,9 @@
 
 .post-author{
     align-self: start;
+    padding-left: 1rem;
+    font-size: 2rem;
+    text-transform: capitalize;
 }
 
 .post-image{
