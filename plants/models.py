@@ -29,11 +29,9 @@ class Post(models.Model):
 
 
 class Profile(models.Model):
-    # Delete profile when user is deleted
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = CloudinaryField('profile_image', default='placeholder')
 
     def __str__(self):
-        # show how we want it to be displayed
         return f'{self.user.username} Profile'
 

@@ -10,6 +10,18 @@
     border-radius: 0.2rem;
 }
 
+p{
+
+}
+
+.brand{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: green;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
 .post-image img{
     width: 80%;
     height: auto;
@@ -47,15 +59,23 @@
 
 .zoom {
     padding: 50px;
-    transition: transform .2s; /* Animation */
+    transition: transform .2s;
     width: 200px;
     height: 200px;
     margin: 0 auto;
   }
   
   .zoom:hover {
-    transform: scale(0.9); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(0.9);
   }
+
+footer {
+    color: black;
+    padding-top: 2rem;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
 
 
 

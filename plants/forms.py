@@ -12,5 +12,4 @@ class PostForm(forms.ModelForm):
 		widgets = {
 			'caption': forms.TextInput(attrs={'class': 'form-control'}),
 			'slug': forms.TextInput(attrs={'class': 'form-control'}),
-            'featured_image': forms.ImageField()
 		}
