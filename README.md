@@ -3,9 +3,8 @@ Plantgram is a website created to help people show off their house plants that t
 
 This was created for a project for the Full Stack Development course hosted by [Code Institute](https://codeinstitute.net/ie/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAzMGNBhCyARIsANpUkzORRe5o1VJJG9_EwnX2Oxn-ftPjCcE-f8G-M0uOoLartu-8DkXRH5YaAozNEALw_wcB).
 
-[Farm People (Link to external site)](https://plantgram-2022.herokuapp.com/)
+[Plantgram (Link to external site)](https://plantgram-2022.herokuapp.com/)
 
-![Am-I-Responsive](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/Am-I-Responsive.png)
 
 ## The Website
 
@@ -13,77 +12,42 @@ This Website is created as a base for a fully functioning website.
 
 * This goal of the website from the beginning was to create a solid platform to move forward with. The basic layout is solid and clear which will make it easy to be improved and added to.
 
-* The user can find out about the farm and view the about page to find out about the couple that is running it.
+* The user can show off the plants that they are proud of and like other plants posted by people.
 ## Features
 
 ### **Design**
-![Original-Design](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/WebsiteConcept.png)
 
-* The original website concept pictured above taught me about how designing for mobile and tablet first can help with later stages of the web development process. The original design was hard to make responsive as it was very illustration-based. It also did not pass a lot of the lighthouse accessibility requirements as there was a lack of contrast between element colors and text. This is why the website transformed into a much cleaner and legible design that we can see now on the finished product. Images of the current website are seen below.
+
+/ To be complated /
 
 ### **Existing Features**
 
 * Landing Page
-  * The landing page clearly shows what the website is for and guides the user to social media.
 
-![Instagram-main-page](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/instagram-main-page.png)
-
-----
-
-* Social media links are also clear on the footer
+  / To be completed /
 
 ----
-
-![recipe-page-cards](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/recipe-page-cards.png)
-
-----
-
-* The recipe page cards are sorted automatically for responsiveness using CSS grid templates. This proved to be a powerful way of adding responsive grids without using multiple media queries!
-
-![Contact-Form](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/contact-page.png)
-
-----
-
-* The contact page brings you to a form where you can sign up for recipe ideas so that the farm can contact you with recipes every week. These recipes will be tailored to produce available to entice the customer to order produce.
 
 
 ### **Future Features**
 
-* Recipe cards at end of the recipe page will bring the user to separate full recipe pages.
-* Recipe cards and recipe pages are populated by one JSON file.
-* Contact page can start a live chat with the couple(Should be feasible as traffic will only be local)
-* A better nav bar and hamburger menu for mobile.
+* Plants are catagorised based on the users chosen catagories.
+* Post funcionality will accept multiple plant images.
+* Users can follow other users, showing their posts first on post list view.
+* Users can start discussions about plants.
 
 ## Testing
 
-I have manually tested this project by doing the following:
-* Opening the site hosted on GitHub pages on a laptop, monitor, tablet, and mobile device.
-* Resizing the site in responsive mode on Firefox and Google Chrome.
+  / To be completed /
 
 
 
 ## Validator Testing
 
-NOTE: During validation, it was found that Instagram's embed code does not pass validation so a choice was made to include the Instagram post as an image enclosed in an 'a'.
-
-* [W3C CSS Validator](https://www.w3.org/)
-  * No errors returned for the CSS in this project using the W3C CSS validator. [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
-* [W3 HTML Validator](https://validator.w3.org/nu/)
-  * No errors relater to my code using the W3 HTML validator.
-    * Index.html only returned errors for instagrams embed code. [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Findex.html)
-    * contact.html returned no errors. [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Fcontact.html)
-    * About.html returned no errors. [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Fabout.html)
-    * Recipes.html returned no errors. [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Frecipes.html)
-
-----
-
-![Lighthouse-Results](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/accessibility-100.png)
-  * Next the project was passed through the [Lighthouse](https://developers.google.com/web/tools/lighthouse) validator in the chrome dev tools. Here we can see that the website receives a %100 accessibility score which is important for websites today to have. Using this tool also allowed for updates to the accessibility of the website while developing it as it shows areas that were missed when adding accessibility.
+ / To be completed /
 
 ## Deployment
-This project was deployed using Github pages which is a free hosting service that can be utilized directly from the settings in a Github repo.
+This project was deployed using Heroku.
 
 ## Credits
-* [Code Institute](https://codeinstitute.net/all-access-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiAv_KMBhAzEiwAs-rX1PXOCAky8yjljHzgvSnccpkyUOvNLVGMuzG11t86weTdFdPiTfNHHhoCFuwQAvD_BwE) This project was created for Code Institute's "Milestone One" project.
-
-* [PixaBay.com](https://pixabay.com/) For the beautiful royalty-free stock photos that were used to create this website.
+* [Code Institute](https://codeinstitute.net/all-access-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiAv_KMBhAzEiwAs-rX1PXOCAky8yjljHzgvSnccpkyUOvNLVGMuzG11t86weTdFdPiTfNHHhoCFuwQAvD_BwE) This project was created for Code Institute's Project 4.
