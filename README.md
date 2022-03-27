@@ -1,9 +1,9 @@
 
-Farm People is a website created to tell people about a small home farm run by a couple in the Republic of Ireland. It produces fresh vegetables and free-range eggs. The site is solely run CSS and HTML. 
+Plantgram is a website created to help people show off their house plants that they are proud of. It is built using Django, Python, Javascript and HTML.
 
 This was created for a project for the Full Stack Development course hosted by [Code Institute](https://codeinstitute.net/ie/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAzMGNBhCyARIsANpUkzORRe5o1VJJG9_EwnX2Oxn-ftPjCcE-f8G-M0uOoLartu-8DkXRH5YaAozNEALw_wcB).
 
-[Farm People (Link to external site)](https://dazhaze.github.io/Milestone-Project-One/index.html)
+[Farm People (Link to external site)](https://plantgram-2022.herokuapp.com/)
 
 ![Am-I-Responsive](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/Am-I-Responsive.png)
 
