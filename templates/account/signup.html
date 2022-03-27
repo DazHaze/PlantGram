@@ -5,7 +5,6 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-{% load crispy_forms_tags %}
 <h1>{% trans "Sign Up" %}</h1>
 
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
@@ -19,10 +18,8 @@
   {% endif %}
   <button type="submit">{% trans "Sign Up" %} &raquo;</button>
   <form action="post" style="margin-top:1.3rem">
-  {{photo_form | crispy}}
   {% csrf_token %}
   </form>
-  <p>hello</p>
 </form>
 
 {% endblock %}
