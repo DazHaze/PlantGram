@@ -1,108 +1,89 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome DazHaze,
+Farm People is a website created to tell people about a small home farm run by a couple in the Republic of Ireland. It produces fresh vegetables and free-range eggs. The site is solely run CSS and HTML. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This was created for a project for the Full Stack Development course hosted by [Code Institute](https://codeinstitute.net/ie/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAzMGNBhCyARIsANpUkzORRe5o1VJJG9_EwnX2Oxn-ftPjCcE-f8G-M0uOoLartu-8DkXRH5YaAozNEALw_wcB).
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[Farm People (Link to external site)](https://dazhaze.github.io/Milestone-Project-One/index.html)
 
-## Gitpod Reminders
+![Am-I-Responsive](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/Am-I-Responsive.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## The Website
 
-`python3 -m http.server`
+This Website is created as a base for a fully functioning website.
 
-A blue button should appear to click: _Make Public_,
+* This goal of the website from the beginning was to create a solid platform to move forward with. The basic layout is solid and clear which will make it easy to be improved and added to.
 
-Another blue button should appear to click: _Open Browser_.
+* The user can find out about the farm and view the about page to find out about the couple that is running it.
+## Features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### **Design**
+![Original-Design](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/WebsiteConcept.png)
 
-A blue button should appear to click: _Make Public_,
+* The original website concept pictured above taught me about how designing for mobile and tablet first can help with later stages of the web development process. The original design was hard to make responsive as it was very illustration-based. It also did not pass a lot of the lighthouse accessibility requirements as there was a lack of contrast between element colors and text. This is why the website transformed into a much cleaner and legible design that we can see now on the finished product. Images of the current website are seen below.
 
-Another blue button should appear to click: _Open Browser_.
+### **Existing Features**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* Landing Page
+  * The landing page clearly shows what the website is for and guides the user to social media.
 
-To log into the Heroku toolbelt CLI:
+![Instagram-main-page](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/instagram-main-page.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+----
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* Social media links are also clear on the footer
 
-------
+----
 
-## Release History
+![recipe-page-cards](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/recipe-page-cards.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+----
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+* The recipe page cards are sorted automatically for responsiveness using CSS grid templates. This proved to be a powerful way of adding responsive grids without using multiple media queries!
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Contact-Form](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/redo-readme/contact-page.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+----
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* The contact page brings you to a form where you can sign up for recipe ideas so that the farm can contact you with recipes every week. These recipes will be tailored to produce available to entice the customer to order produce.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### **Future Features**
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* Recipe cards at end of the recipe page will bring the user to separate full recipe pages.
+* Recipe cards and recipe pages are populated by one JSON file.
+* Contact page can start a live chat with the couple(Should be feasible as traffic will only be local)
+* A better nav bar and hamburger menu for mobile.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Testing
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+I have manually tested this project by doing the following:
+* Opening the site hosted on GitHub pages on a laptop, monitor, tablet, and mobile device.
+* Resizing the site in responsive mode on Firefox and Google Chrome.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Validator Testing
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+NOTE: During validation, it was found that Instagram's embed code does not pass validation so a choice was made to include the Instagram post as an image enclosed in an 'a'.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* [W3C CSS Validator](https://www.w3.org/)
+  * No errors returned for the CSS in this project using the W3C CSS validator. [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
+* [W3 HTML Validator](https://validator.w3.org/nu/)
+  * No errors relater to my code using the W3 HTML validator.
+    * Index.html only returned errors for instagrams embed code. [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Findex.html)
+    * contact.html returned no errors. [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Fcontact.html)
+    * About.html returned no errors. [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Fabout.html)
+    * Recipes.html returned no errors. [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FMilestone-Project-One%2Frecipes.html)
 
-------
+----
 
-## FAQ about the uptime script
+![Lighthouse-Results](https://raw.githubusercontent.com/DazHaze/Milestone-Project-One/main/assets/images/accessibility-100.png)
+  * Next the project was passed through the [Lighthouse](https://developers.google.com/web/tools/lighthouse) validator in the chrome dev tools. Here we can see that the website receives a %100 accessibility score which is important for websites today to have. Using this tool also allowed for updates to the accessibility of the website while developing it as it shows areas that were missed when adding accessibility.
 
-**Why have you added this script?**
+## Deployment
+This project was deployed using Github pages which is a free hosting service that can be utilized directly from the settings in a Github repo.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Credits
+* [Code Institute](https://codeinstitute.net/all-access-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiAv_KMBhAzEiwAs-rX1PXOCAky8yjljHzgvSnccpkyUOvNLVGMuzG11t86weTdFdPiTfNHHhoCFuwQAvD_BwE) This project was created for Code Institute's "Milestone One" project.
 
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+* [PixaBay.com](https://pixabay.com/) For the beautiful royalty-free stock photos that were used to create this website.
