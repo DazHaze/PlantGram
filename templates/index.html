@@ -29,9 +29,14 @@
                     <p class="post-author">{{ post.author }}</p>
                 </div>
                 <div class="post-image">
+                    {% if user.is_authenticated %}
                     <a href="{% url 'plants:post_detail' post.slug  %}">
                         <img src="{{ post.featured_image.url}}" class="zoom" alt="">
                     </a>
+                    {% else %}
+                    <div class="alert alert-primary" role="alert">
+                        Log in to view images
+                      </div>
                 </div>
                 <div class="card-controls">
                     <div>
