@@ -1,89 +1,97 @@
-.scrolled-down{
-    transform:translateY(-100%); transition: all 0.3s ease-in-out;
-  }
-  .scrolled-up{
-    transform:translateY(0); transition: all 0.3s ease-in-out;
-  }
-
-.post-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: auto;
-    padding: 2rem;
-    margin: 20px;
-    border: 1px solid lightslategrey;
-    border-radius: 0.2rem;
-}
-
-p{
+body{
+	background-color: #fafafa;
+	padding: 60px;
+	font-family: 'Droid Sans', sans-serif;
 
 }
 
-.brand{
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    background-color: green;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
+a{
+  text-decoration: none;
 }
 
-.post-image img{
-    width: 80%;
-    height: auto;
+.Instagram-card{
+	background: #ffffff;
+	border: 1px solid #f2f2f2;
+	border-radius: 3px;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+}
+
+.Instagram-card-header{
+	padding: 20px;
+	height: 40px;
+}
+
+.Instagram-card-user-image{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	/* vertical-align: middle; */
+}
+
+.Instagram-card-time{
+	float: right;
+	width: 80px;
+	padding-top:10px;
+	text-align: right;
+	color: #999;
+}
+
+.Instagram-card-user-name{
+	margin-left:20px;
+	font-weight:bold;
+  color: #262626;
+}
+
+.Instagram-card-content{
+  padding: 20px;
+}
+
+.Likes{
+  font-weight: bold;
+}
+
+.Instagram-card-content-user{
+  font-weight: bold;
+  color: #262626;
+}
+
+.hashtag{
+  color: #003569;
+}
+
+.comments{
+  color:#999;
+}
+
+.user-comment{
+  color: #003569;
+}
+
+.Instagram-card-footer{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+hr{
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+ 
 }
 
 
-.post-author{
-    align-self: start;
-    padding-left: 1rem;
-    font-size: 2rem;
-    text-transform: capitalize;
+.footer-action-icons{
+  font-size: 16px;
+  color: #ccc;
 }
 
-.post-image{
-
-    width: 100%;
-
+.comments-input{
+  border: none;
+  margin-left: 10px;
+  width: 100%;
 }
-
-.post-image a{
-    display: flex;
-    justify-content: center;
-}
-
-.card-controls{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.card-controls i{
-    align-self: start !important;
-}
-
-.zoom {
-    padding: 50px;
-    transition: transform .2s;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-  
-  .zoom:hover {
-    transform: scale(0.9);
-  }
-
-footer {
-    color: black;
-    padding-top: 2rem;
-    font-family: roboto, sans-serif;
-    text-align: center;
-    margin: 0 auto;
-}
-
-
-
-
