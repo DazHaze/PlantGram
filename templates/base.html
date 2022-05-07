@@ -61,7 +61,7 @@
 
     <nav class="navbar navbar-expand-sm navbar-light bg-light autohide">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand mb-0 h1">
+            <a href="{%  url 'plants:home'  %}" class="navbar-brand mb-0 h1">
                 <img class="d-line-block align-top"
                     src="https://www.dlf.pt/dfpng/middlepng/229-2290749_transparent-green-tea-png-tea-leaf-logo-png.png"
                     width="60" height="30">
@@ -74,15 +74,27 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a href="#" class="nav-link">
+                        <a href="{%  url 'plants:home'  %}" class="nav-link">
                             Home
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a href="#" class="nav-link">
+                        <a href="{% url 'plants:add_post' %}" class="nav-link">
                             Add Post
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a href="{% url 'account_login' %}" class="nav-link">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="{% url 'account_signup' %}" class="nav-link">
+                            Register
                         </a>
                     </li>
                 </ul>
@@ -131,14 +143,14 @@
             transition: all 0.3s ease-in-out;
         }
 
-        .autohide{
-		position: fixed;
-	    top: 0;
-	    right: 0;
-	    left: 0;
-	    width: 100%;
-	    z-index: 1030;
-	}
+        .autohide {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030;
+        }
     </style>
 
     <main class="flex-shrink-0 main-bg">

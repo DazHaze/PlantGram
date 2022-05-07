@@ -9,6 +9,11 @@ a{
   text-decoration: none;
 }
 
+.background-text{
+  color: #999;
+  font-size: 0.8rem;
+}
+
 .Instagram-card{
 	background: #ffffff;
 	border: 1px solid #f2f2f2;
@@ -18,9 +23,21 @@ a{
 	margin: auto;
 }
 
+.Instagram-card-image{
+  display: flex;
+  justify-content: center;
+}
+
+.Instagram-card-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .Instagram-card-header{
 	padding: 20px;
-	height: 40px;
+	height: 100%;
+  /* background-color: #fafafa; */
 }
 
 .Instagram-card-user-image{
@@ -32,9 +49,11 @@ a{
 
 .Instagram-card-time{
 	float: right;
-	width: 80px;
-	padding-top:10px;
+	width: auto;
 	text-align: right;
+  margin-right:20px;
+  vertical-align: center;
+  padding-top:5px;
 	color: #999;
 }
 

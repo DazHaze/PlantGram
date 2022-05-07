@@ -23,6 +23,9 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+    def date(self):
+        return self.created_on.date()
+
     def get_absolute_url(self):
         return reverse('plants:post_detail', args=[self.slug])
 
