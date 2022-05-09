@@ -30,7 +30,7 @@ body {
 
 .navbar {
   background-color: white !important;
-  border-bottom: 1px dotted var(--orangeAccent);
+  border-bottom: 2px dotted var(--orangeAccent);
 }
 
 .navbar-brand {
@@ -113,7 +113,9 @@ a {
 .Instagram-card-header {
   padding: 20px;
   height: 100%;
-  background-color: var(--darkestGrey);
+  /* background-color: var(--darkestGrey); */
+  background-image: linear-gradient(to right, green, orange);
+  border-radius: 20px 20px 0 0;
 }
 
 .Instagram-card-user-image {
@@ -131,7 +133,7 @@ a {
   margin-right: 20px;
   vertical-align: center;
   padding-top: 5px;
-  color: #999;
+  color: white;
 }
 
 .Instagram-card-user-name {
