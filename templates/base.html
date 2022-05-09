@@ -82,21 +82,23 @@
                     </li>
                     <li class="nav-item active">
                         <a href="{% url 'plants:add_post' %}" class="nav-link">
-                            Add Post
+                            <i class="far fa-plus-square" style="color:white; font-size:1.5rem;"></i>
                         </a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a href="{% url 'account_login' %}" class="nav-link">
-                            Login
-                        </a>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
-                    <li class="nav-item active">
-                        <a href="{% url 'account_signup' %}" class="nav-link">
-                            Register
-                        </a>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

@@ -39,6 +39,7 @@ body{
 .sign-in-card h3{
   padding-left: 1rem;
   border-left: 1px solid var(--orangeAccent);
+  margin: 1rem;
 }
 
 .sign-in-card p{
@@ -55,7 +56,15 @@ body{
     color: black;
   }
 
+.btn-signup{
+  background-color: var(--orangeAccent) !important;
+  color: white !important;
+  margin:0 0 1rem 0 !important;
+}
+
 /*  */
+
+
 
 a{
   text-decoration: none;
