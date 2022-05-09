@@ -25,46 +25,9 @@
 </head>
 
 <body style="padding-top: 56px;">
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'plants:home' %}"><span class="brand">PLANT</span><span
-                    class="thin">gram</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{%  url 'plants:home'  %}">Home</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                </ul>
-                <span class="navbar-text text-muted">
-                    <a class="nav_link" href="{% url 'plants:add_post' %}">Add Plant</a>
-                </span>
-            </div>
-        </div>
-    </nav> -->
-
-
     <nav class="navbar navbar-expand-sm navbar-light autohide">
         <div class="container-fluid">
             <a href="{%  url 'plants:home'  %}" class="navbar-brand mb-0 h1">
-                <!-- <img class="d-line-block align-top"
-                    src="https://www.dlf.pt/dfpng/middlepng/229-2290749_transparent-green-tea-png-tea-leaf-logo-png.png"
-                    width="60" height="30"> -->
                 Planda
             </a>
 
@@ -75,16 +38,18 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
                     <li class="nav-item active">
-                        <a href="{%  url 'plants:home'  %}" class="nav-link">
+                        <a href="{%  url 'plants:list_view'  %}" class="nav-link">
                             Home
                         </a>
                     </li>
                     <li class="nav-item active">
                         <a href="{% url 'plants:add_post' %}" class="nav-link">
-                            <i class="far fa-plus-square" style="color:white; font-size:1.5rem;"></i>
+                            <i class="far fa-plus-square" style="color:black; font-size:1.5rem;"></i>
                         </a>
                     </li>
+                    {% endif %}
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
@@ -107,31 +72,25 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            el_autohide = document.querySelector('.autohide');
-
-            // add padding-top to bady (if necessary)
+            nav_autohide = document.querySelector('.autohide');
             navbar_height = document.querySelector('.navbar').offsetHeight;
             document.body.style.paddingTop = navbar_height + 'px';
 
-            if (el_autohide) {
+            if (nav_autohide) {
                 var last_scroll_top = 0;
                 window.addEventListener('scroll', function () {
                     let scroll_top = window.scrollY;
                     if (scroll_top < last_scroll_top) {
-                        el_autohide.classList.remove('scrolled-down');
-                        el_autohide.classList.add('scrolled-up');
+                        nav_autohide.classList.remove('scrolled-down');
+                        nav_autohide.classList.add('scrolled-up');
                     } else {
-                        el_autohide.classList.remove('scrolled-up');
-                        el_autohide.classList.add('scrolled-down');
+                        nav_autohide.classList.remove('scrolled-up');
+                        nav_autohide.classList.add('scrolled-down');
                     }
                     last_scroll_top = scroll_top;
                 });
-                // window.addEventListener
             }
-            // if
-
         });
-        // DOMContentLoaded  end
     </script>
 
     <style>

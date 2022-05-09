@@ -19,14 +19,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --color: {
-                % static 'images/splash_background.jpg'%
-            }
-
-            ;
-        }
-
         * {
             padding: 0;
             margin: 0;
@@ -65,7 +57,8 @@
 
                         Login</button>
                         <p style="color:white; padding:1rem; font-size:0.7rem;">Not a member of the Planda community
-                            yet? <a href="{% url 'account_signup' %}" style="margin: 0.5rem; color: slategrey;">Register now</a></p>
+                            yet? <a href="{% url 'account_signup' %}" style="margin: 0.5rem; color: slategrey;">Register
+                                now</a></p>
                     </div>
                 </div>
             </div>
@@ -89,7 +82,8 @@
 
                         Login</button>
                         <p style="color:white; padding:1rem; font-size:0.7rem;">Not a member of the Planda community
-                            yet? <a href="{% url 'account_signup' %}" style="margin: 0.5rem; color: slategrey;">Register now</a></p>
+                            yet? <a href="{% url 'account_signup' %}" style="margin: 0.5rem; color: slategrey;">Register
+                                now</a></p>
                     </div>
                 </div>
             </div>
@@ -99,11 +93,16 @@
 
 </body>
 
-<footer class="d-flex justify-content-center bg-light">
-    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2022 Copyright:
-        <a class="text-reset fw-light" href="https://github.com/DazHaze" target="_blank">Darragh Hayes</a>
-    </div>
+<footer style="  
+color: white;
+position: fixed;
+padding: 10px 10px 0px 10px;
+bottom: 0;
+width: 100%;
+/* Height of the footer*/ 
+height: 40px;
+text-align: center;">
+    Copyright Darragh Hayes 2022
 </footer>
 
 </html>

@@ -8,52 +8,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+    </style>
+
 </head>
 
 <body>
-    <!-- <div class="row flex-d justify-content-center">
-        {% for post in posts %}
-        <div class="post-card">
-            <div class="card-content">
-                <p>{{ post.caption}}</p>
-            </div>
-            <div style="display:flex; width:100%;">
-                {% if "placeholder" in post.author.profile.image.url %}
-                <img src="https://w7.pngwing.com/pngs/304/275/png-transparent-user-profile-computer-icons-profile-miscellaneous-logo-monochrome-thumbnail.png"
-                    style="width: 50px; height: 50px; align-self: left;" alt="">
-                {% else %}
-                <img src="{{ post.author.profile.image.url }}" alt="">
-                {% endif %}
-                <p class="post-author">{{ post.author }}</p>
-            </div>
-            <div class="post-image">
-                {% if user.is_authenticated %}
-                <a href="{% url 'plants:post_detail' post.slug  %}">
-                    <img src="{{ post.featured_image.url}}" class="zoom" alt="">
-                </a>
-                {% else %}
-                <div>
-                    <img src="{{ post.featured_image.url}}" class="zoom" alt="">
-                    <p style="text-align:center; background-color:black; color:white; padding:0.5rem;">Login to view
-                        post.</p>
-                </div>
-                {% endif %}
-            </div>
-            <div class="card-controls">
-                <div>
-                    <i class="far fa-heart">{{ post.number_of_likes}}</i>
-                </div>
-                <p>{{post.created_on}}</p>
-            </div>
-
-        </div>
-        {% endfor %}
-
-    </div> -->
     {% for post in posts %}
     <div class="Instagram-card">
         <div class="Instagram-card-header">
-            <!-- <img src="https://scontent-mia1-2.cdninstagram.com/t51.2885-19/11351720_883119395071375_1326111195_a.jpg"class="Instagram-card-user-image"> -->
             {% if "placeholder" in post.author.profile.image.url %}
             <img src="https://w7.pngwing.com/pngs/304/275/png-transparent-user-profile-computer-icons-profile-miscellaneous-logo-monochrome-thumbnail.png"
                 class="Instagram-card-user-image" alt="">
@@ -65,27 +30,23 @@
         </div>
 
         <div class="Instagram-card-image">
-            <!-- <img src= "https://scontent-mia1-2.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/16123953_1838454153060984_5963456318336401408_n.jpg" height=600px/> -->
-            {% if user.is_authenticated %}
             <a href="{% url 'plants:post_detail' post.slug  %}">
-                <img src="{{ post.featured_image.url}}" height="600px" alt="">
+                <img src="{{ post.featured_image.url}}" height="600px" alt="" style="border-bottom: 2px dotted orange ;">
             </a>
-            {% else %}
-                <img src="{{ post.featured_image.url}}" height="600px" alt="">
-                <!-- <p style="text-align:center; background-color:black; color:white; padding:0.5rem;">Login to view
-                        post.</p> -->
-            {% endif %}
         </div>
 
         <div class="Instagram-card-content">
             <p class="Likes">{{ post.number_of_likes}} likes</p>
             <p><a class="Instagram-card-content-user">
-                    {{ post.author }} 
+                    {{ post.author }}
                 </a>
                 Description placeholder: lorem ipsum dolor sit amet lorem. Donec sed diam non lorem ipsum dolor sit amet
                 lorem lorem. Donec sed diam non lorem ipsum lorem Lorem ipsum dolor sit amet consectetur adipisicing
                 elit. Pariatur odit, dolor quo accusantium architecto hic facilis iusto aliquam suscipit nam quaerat
-                nobis, eum inventore est, tenetur a impedit perspiciatis qui? <p class="background-text">{{ post.created_on }}</p></p>
+                nobis, eum inventore est, tenetur a impedit perspiciatis qui? <p class="background-text">
+                    {{ post.created_on }}</p>
+            </p>
+            <hr>
             <p class="comments">1 comments</p>
             <br><a class="user-comment" href="https://www.instagram.com">exampleUser90789</a> Nice Plant!</br>
         </div>
