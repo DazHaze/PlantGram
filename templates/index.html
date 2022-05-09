@@ -41,41 +41,69 @@
 </head>
 
 <body>
-    <div class="splash-image"
-        style="background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80'); height:100vh; box-shadow: inset 0 0 100px black;">
-        <div class="h-100 d-flex justify-content-center align-items-center">
-            <div>
-                <div class="d-flex" style="padding: 1rem; border-left: 5px solid orange">
-                    <h1 style="color: slategray;">Welcome to</h1>
-                    <h1 style="padding-left: 1rem; text-transform: uppercase; font-family: 'Poppins';"> Planda</h1>
-                    <i class="fas fa-leaf" style="color: green;"></i>
-                </div>
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <form action="{% url 'account_login' %}">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-primary" style="
+    <div class="container-fluid">
+
+        <div class="row splash-image"
+            style="background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80'); height:100vh; box-shadow: inset 0 0 100px black; position: relative;">
+            <div class="col-sm d-block d-md-none h-100 d-flex justify-content-center align-items-center">
+                <div style="background: rgba(117,117,117,0.3); padding:3rem; border-radius: 0.3rem;">
+                    <div class="d-flex" style="padding: 1rem; border-left: 5px solid orange">
+                        <h1 style="color: white;">Welcome to</h1>
+                        <h1 style="padding-left: 1rem; text-transform: uppercase; font-family: 'Poppins';"> Planda
+                        </h1>
+                        <i class="fas fa-leaf" style="color: green;"></i>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <form action="{% url 'account_login' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary" style="
                         background-color: orange !important; 
                         border:1px solid orange !important; 
                         color:white  !important;
                         ">
-                    </form>
+                        </form>
 
                         Login</button>
-                    <p style="color:white; padding:1rem; font-size:0.7rem;">Not a member of the Planda community yet? <a
-                            href="#" style="margin: 0.5rem; color: slategrey;">Register now</a></p>
+                        <p style="color:white; padding:1rem; font-size:0.7rem;">Not a member of the Planda community
+                            yet? <a href="#" style="margin: 0.5rem; color: slategrey;">Register now</a></p>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg d-none d-md-flex h-100 justify-content-center align-items-center">
+                <div style="background: rgba(117,117,117,0.3); padding:3rem; border-radius: 0.3rem;">
+                    <div class="d-flex" style="padding: 1rem; border-left: 5px solid orange">
+                        <h1 style="color: white;">Welcome to</h1>
+                        <h1 style="padding-left: 1rem; text-transform: uppercase; font-family: 'Poppins';"> planda
+                        </h1>
+                        <i class="fas fa-leaf" style="color: green;"></i>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <form action="{% url 'account_login' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary" style="
+                        background-color: orange !important; 
+                        border:1px solid orange !important; 
+                        color:white  !important;
+                        ">
+                        </form>
 
-
+                        Login</button>
+                        <p style="color:white; padding:1rem; font-size:0.7rem;">Not a member of the Planda community
+                            yet? <a href="#" style="margin: 0.5rem; color: slategrey;">Register now</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
 </body>
 
 <footer class="d-flex justify-content-center bg-light">
     <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2022 Copyright:
         <a class="text-reset fw-light" href="https://github.com/DazHaze" target="_blank">Darragh Hayes</a>
-      </div>
+    </div>
 </footer>
 
 </html>

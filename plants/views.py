@@ -9,12 +9,15 @@ from django.views.generic import (
 from .models import Post
 from.forms import PostForm
 
+class LandingView(ListView):
+    queryset = Post.objects
+    context_object_name = "landing"
+    template_name = "index.html"
 
 class PostListView(ListView):
-    template_name = "index.html"
     queryset = Post.objects.all()
     context_object_name = "posts"
-    template_name = 'index.html'
+    template_name = 'list_view.html'
 
 
 class PostDetail(DetailView):

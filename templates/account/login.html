@@ -7,13 +7,12 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container sign-in-card">
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign In" %}</h3>
+    <div class="col-md-8 mt-3 offset-md-2 sign-in-header">
+      <h3>Sign in</h3>
 
-      <p>{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If you
-        have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+      <p>{% blocktrans %}Welcome to PLANDA<i class="fas fa-leaf" style="color: green;"></i>. To interact with our amazing community and show off your great plants. Please login if you have an account already. Not a member yet? Then <a class="link" href="{{ signup_url }}">sign up</a>
         first.{% endblocktrans %}</p>
     </div>
   </div>
