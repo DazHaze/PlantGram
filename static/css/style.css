@@ -197,7 +197,7 @@ hr {
   width: 100%;
 }
 
-footer{
+footer, .landing-footer{
   color: white;
   position: fixed;
   padding: 10px 10px 0px 10px;
