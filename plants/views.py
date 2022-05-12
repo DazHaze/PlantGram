@@ -17,7 +17,7 @@ class LandingView(ListView):
     template_name = "index.html"
 
 class PostListView(ListView):
-    queryset = Post.objects.all()
+    queryset = Post.objects.order_by('-created_on')
     context_object_name = "posts"
     template_name = 'list_view.html'
 

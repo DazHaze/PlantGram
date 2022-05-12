@@ -28,7 +28,12 @@
             <a class="Instagram-card-user-name" href="https://www.instagram.com/rogersbase/"> {{ post.author }} </a>
             <p class="Instagram-card-time"> {{post.date}} </p>
         </div>
-
+        <div style="
+        width: 100%;
+        text-align:center;
+        ">
+            <h3>{{post.title}}</h3>
+        </div>
         <div class="Instagram-card-image">
             <a href="{% url 'plants:post_detail' post.slug  %}">
                 <img src="{{ post.featured_image.url}}" height="600px" alt="" style="border-bottom: 2px dotted orange ;">
@@ -40,10 +45,7 @@
             <p><a class="Instagram-card-content-user">
                     {{ post.author }}
                 </a>
-                Description placeholder: lorem ipsum dolor sit amet lorem. Donec sed diam non lorem ipsum dolor sit amet
-                lorem lorem. Donec sed diam non lorem ipsum lorem Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Pariatur odit, dolor quo accusantium architecto hic facilis iusto aliquam suscipit nam quaerat
-                nobis, eum inventore est, tenetur a impedit perspiciatis qui? <p class="background-text">
+                {{ post.description }} <p class="background-text">
                     {{ post.created_on }}</p>
             </p>
             <hr>
