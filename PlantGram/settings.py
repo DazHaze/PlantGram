@@ -32,6 +32,8 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 ALLOWED_HOSTS = ["plantgram-2022.herokuapp.com", "localhost"]
 
 
+# check link
+
 # Application definition
 
 INSTALLED_APPS = [
