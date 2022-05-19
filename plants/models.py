@@ -26,12 +26,6 @@ class Post(models.Model):
         except IntegrityError:
             self.save(*args, **kwargs)
 
-    # def __str__(self):
-    #     return self.description()
-
-    # def __str__(self):
-    #     return self.title()
-
     def number_of_likes(self):
         return self.likes.count()
 
@@ -40,6 +34,9 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('plants:post_detail', args=[self.slug])
+
+    def __str__(self):
+        return f'{self.title}'
 
 
 
@@ -52,4 +49,13 @@ class Profile(models.Model):
 
 class Picture(models.Model):
     image = CloudinaryField('image')
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    body = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' % (self.post.__str__(), self.name)
 

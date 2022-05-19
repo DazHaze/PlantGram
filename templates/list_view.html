@@ -36,7 +36,8 @@
         </div>
         <div class="Instagram-card-image">
             <a href="{% url 'plants:post_detail' post.slug  %}">
-                <img src="{{ post.featured_image.url}}" height="600px" alt="" style="border-bottom: 2px dotted orange ;">
+                <img src="{{ post.featured_image.url}}" height="600px" alt=""
+                    style="border-bottom: 2px dotted orange ;">
             </a>
         </div>
 
@@ -49,13 +50,42 @@
                     {{ post.created_on }}</p>
             </p>
             <hr>
-            <p class="comments">1 comments</p>
-            <br><a class="user-comment" href="https://www.instagram.com">exampleUser90789</a> Nice Plant!</br>
+            <!-- <p class="comments">1 comments</p> -->
+            <!-- <br><a class="user-comment" href="https://www.instagram.com">exampleUser90789</a> Nice Plant!</br> -->
+            {% if not post.comments.all %}
+            <p>No Comments yet ...</p>
+            {% else %}
+            {% for comment in post.comments.all %}
+            <div class="user-comment">
+                <p>{{ comment.name }}</p>
+                <p>&nbsp;-&nbsp; </p>
+                <p>{{ comment.body }}&nbsp; </p>
+                <p style="font-style:italic; color:lightgray;">{{ comment.date_added }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <hr>
         </div>
 
-        <div class="Instagram-card-footer">
+        <div class="Instagram-card-footer d-flex justify-content-around">
             <a class="footer-action-icons" href="#"><i class="fa fa-heart"></i></a>
-            <input class="comments-input" type="text" placeholder="Make a comment ..." />
+
+            <!-- {% if user.is_authenticated %}
+            <div class="form-group">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-secondary">Post</button>
+            </div>
+
+            {% else %}
+
+            You're not allowed here! (and you know it...)
+
+            {% endif %} -->
+            <a href="{% url 'plants:post_detail' post.slug  %}" class="footer-action-icons a-link">Leave a comment...</a>
+
+            <!-- <input class="comments-input" type="text" placeholder="Make a comment ..." /> -->
             <a class="footer-action-icons" href="#"><i class="fa fa-ellipsis-h"></i></a>
         </div>
 

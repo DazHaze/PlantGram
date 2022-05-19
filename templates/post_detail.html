@@ -34,9 +34,21 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
+                {% if not post.comments.all %}
+                <p>No Comments yet ...</p>
+                {% else %}
+                {% for comment in post.comments.all %}
+                <div class="user-comment">
+                    <p>{{ comment.name }}</p>
+                    <p>&nbsp;-&nbsp; </p>
+                    <p>{{ comment.body }}&nbsp; </p>
+                    <p style="font-style:italic; color:lightgray;">{{ comment.date_added }}</p>
+                </div>
+                {% endfor %}
+                {% endif %}
                 <div class="row">
                     <div class="col-1">
-                        <strong>
+                        <!-- <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'plants:post_like' post.slug %}" method="post">
                                 {% csrf_token %}
@@ -52,15 +64,14 @@
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
                             <span class="text-secondary">{{ post.number_of_likes}}</span>
-                        </strong>
+                        </strong> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <hr>
+        <div class="col" style="border-top: 2px dotted orange">
         </div>
     </div>
 
