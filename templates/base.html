@@ -6,7 +6,8 @@
 
 <head>
     <title>Planda</title>
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/leaf-16.ico?token=GHSAT0AAAAAABT6V2KLHJEGFVYBCLLX23TMYTZVGRA">
+    <link rel="icon" type="image/x-icon"
+        href="https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/leaf-16.ico?token=GHSAT0AAAAAABT6V2KLHJEGFVYBCLLX23TMYTZVGRA">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
@@ -54,8 +55,16 @@
                 <ul class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
+                        <img src="https://w7.pngwing.com/pngs/304/275/png-transparent-user-profile-computer-icons-profile-miscellaneous-logo-monochrome-thumbnail.png"
+                            class="Instagram-card-user-image" alt="">
+                    </li>
+                    <li class="nav-item active">
+                        <p class="nav-link">{{user.username}}</p>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
+
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_signup' %}">Register</a>

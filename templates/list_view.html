@@ -49,11 +49,10 @@
                 {{ post.description }} <p class="background-text">
                     {{ post.created_on }}</p>
             </p>
-            <hr>
             <!-- <p class="comments">1 comments</p> -->
             <!-- <br><a class="user-comment" href="https://www.instagram.com">exampleUser90789</a> Nice Plant!</br> -->
             {% if not post.comments.all %}
-            <p>No Comments yet ...</p>
+            <p class="text-muted">No Comments yet ...</p>
             {% else %}
             {% for comment in post.comments.all %}
             <div class="user-comment">
@@ -64,11 +63,26 @@
             </div>
             {% endfor %}
             {% endif %}
-            <hr>
         </div>
 
         <div class="Instagram-card-footer d-flex justify-content-around">
-            <a class="footer-action-icons" href="#"><i class="fa fa-heart"></i></a>
+            <!-- <a class="footer-action-icons" href="#"><i class="fa fa-heart"></i></a> -->
+            <strong>
+                {% if user.is_authenticated %}
+                <form class="footer-action-icons" action="{% url 'plants:post_like' post.slug %}" method="post">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="blogpost_id" value="{{ post.slug}}" class="form-submit-button"><i
+                            class="fa fa-heart footer-action-icons"></i></button>
+                    {% else %}
+                    <button type="submit" name="blogpost_id" value="{{ post.slug}}" class="form-submit-button"><i
+                            class="fa fa-heart footer-action-icons" style="color:grey !important;"></i></button>
+                    {% endif %}
+                </form>
+                {% else %}
+                <span><i class="fa fa-heart footer-action-icons" style="color:grey !important;"></i></span>
+                {% endif %}
+            </strong>
 
             <!-- {% if user.is_authenticated %}
             <div class="form-group">
@@ -83,7 +97,8 @@
             You're not allowed here! (and you know it...)
 
             {% endif %} -->
-            <a href="{% url 'plants:post_detail' post.slug  %}" class="footer-action-icons a-link">Leave a comment...</a>
+            <a href="{% url 'plants:post_detail' post.slug  %}" class="footer-action-icons a-link">Leave a
+                comment...</a>
 
             <!-- <input class="comments-input" type="text" placeholder="Make a comment ..." /> -->
             <a class="footer-action-icons" href="#"><i class="fa fa-ellipsis-h"></i></a>

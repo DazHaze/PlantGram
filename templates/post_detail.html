@@ -8,13 +8,52 @@
                 <div style="display:flex; width:100%;">
                     {% if "placeholder" in post.author.profile.image.url %}
                     <img src="https://w7.pngwing.com/pngs/304/275/png-transparent-user-profile-computer-icons-profile-miscellaneous-logo-monochrome-thumbnail.png"
-                        style="width: 50px; height: 50px; align-self: left;" alt="">
+                        class="Instagram-card-user-image" alt="">
                     {% else %}
-                    <img src="{{ post.author.profile.image.url }}" alt="">
+                    <img src="{{ post.author.profile.image.url }}" class="Instagram-card-user-image" alt="">
                     {% endif %}
-                    <p class="post-author">{{ post.author }}</p>
+                    <p class="Instagram-card-user-name" style="color:black !important;">{{ post.author }}</p>
                 </div>
                 <p>{{post.created_on}}</p>
+                <p class="card-text ">
+                    {{ post.description }}
+                </p>
+                {% if not post.comments.all %}
+                <p>No Comments yet ...</p>
+                {% else %}
+                {% for comment in post.comments.all %}
+                <div class="user-comment">
+                    <p>{{ comment.name }}</p>
+                    <p>&nbsp;-&nbsp; </p>
+                    <p>{{ comment.body }}&nbsp; </p>
+                    <p style="font-style:italic; color:lightgray;">{{ comment.date_added }}</p>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <div class="row">
+                    <div class="col-1">
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="footer-action-icons d-flex" action="{% url 'plants:post_like' post.slug %}"
+                                method="post">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="blogpost_id" value="{{ post.slug}}"
+                                    class="form-submit-button"><i class="fa fa-heart footer-action-icons"></i></button>
+                                <p style="color:black; padding-top: 1rem;" class="text-muted">{{post.number_of_likes}}</p>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{ post.slug}}"
+                                    class="form-submit-button"><i class="fa fa-heart footer-action-icons"
+                                        style="color:grey !important;"></i></button>
+                                        <p style="color:black; padding-top: 1rem;" class="text-muted">{{post.number_of_likes}}</p>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span><i class="fa fa-heart footer-action-icons" style="color:grey !important;"></i></span>
+                            {% endif %}
+                        </strong>
+                    </div>
+                </div>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
@@ -31,42 +70,7 @@
     <div class="row">
         <div class="col mb-4  mt-3 left  top">
             <div>
-                <p class="card-text ">
-                    {{ post.content | safe }}
-                </p>
-                {% if not post.comments.all %}
-                <p>No Comments yet ...</p>
-                {% else %}
-                {% for comment in post.comments.all %}
-                <div class="user-comment">
-                    <p>{{ comment.name }}</p>
-                    <p>&nbsp;-&nbsp; </p>
-                    <p>{{ comment.body }}&nbsp; </p>
-                    <p style="font-style:italic; color:lightgray;">{{ comment.date_added }}</p>
-                </div>
-                {% endfor %}
-                {% endif %}
-                <div class="row">
-                    <div class="col-1">
-                        <!-- <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'plants:post_like' post.slug %}" method="post">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{ post.slug}}" class="btn-like"><i 
-                                    class="fas fa-heart"></i></button>
-                                {% else %}
-                                <button type="submit" name="blogpost_id" value="{{ post.slug}}" class="btn-like"><i 
-                                    class="far fa-heart"></i></button>
-                                {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                            <span class="text-secondary">{{ post.number_of_likes}}</span>
-                        </strong> -->
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

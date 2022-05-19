@@ -123,7 +123,7 @@ a {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--orangeAccent);
+  border: 2px solid var(--orangeAccent);
   /* vertical-align: middle; */
 }
 
@@ -188,7 +188,7 @@ hr {
 
 
 .footer-action-icons {
-  font-size: 16px;
+  font-size: 1.2rem;
   color: var(--orangeAccent);
   text-decoration: none;
 }
@@ -200,21 +200,34 @@ hr {
   width: 100%;
 }
 
-footer, .landing-footer{
+footer,
+.landing-footer {
   color: white;
   position: fixed;
   padding: 10px 10px 0px 10px;
   bottom: 0;
   width: 100%;
-  /* Height of the footer*/ 
+  /* Height of the footer*/
   height: 40px;
   text-align: center;
 }
 
-.a-link{
+.a-link {
   color: var(--greenAccent);
 }
 
-.a-link:hover{
+.a-link:hover {
   color: var(--orangeAccent);
+}
+
+.form-submit-button {
+
+  background: transparent;
+
+  box-shadow: 0px 0px 0px transparent;
+
+  border: 0px solid transparent;
+
+  text-shadow: 0px 0px 0px transparent;
+
 }
