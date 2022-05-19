@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'plants',
+    'crispy_forms',
 ]
 
 SITE_ID = 1

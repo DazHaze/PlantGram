@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
+{% load crispy_forms_tags %}
+
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -26,9 +28,19 @@
                     <p>{{ comment.name }}</p>
                     <p>&nbsp;-&nbsp; </p>
                     <p>{{ comment.body }}&nbsp; </p>
-                    <p style="font-style:italic; color:lightgray;">{{ comment.date_added }}</p>
+                    <p style="font-style:italic; color:lightgray;">{{ comment.created_on }}</p>
                 </div>
                 {% endfor %}
+                {% endif %}
+                {% if user.is_authenticated %}
+
+                <h3>Leave a comment:</h3>
+                <form method="post" style="margin-top: 1.3rem;">
+                    {% csrf_token %}
+                    {{ comment_form | crispy}}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+
                 {% endif %}
                 <div class="row">
                     <div class="col-1">
@@ -40,12 +52,14 @@
                                 {% if liked %}
                                 <button type="submit" name="blogpost_id" value="{{ post.slug}}"
                                     class="form-submit-button"><i class="fa fa-heart footer-action-icons"></i></button>
-                                <p style="color:black; padding-top: 1rem;" class="text-muted">{{post.number_of_likes}}</p>
+                                <p style="color:black; padding-top: 1rem;" class="text-muted">{{post.number_of_likes}}
+                                </p>
                                 {% else %}
                                 <button type="submit" name="blogpost_id" value="{{ post.slug}}"
                                     class="form-submit-button"><i class="fa fa-heart footer-action-icons"
                                         style="color:grey !important;"></i></button>
-                                        <p style="color:black; padding-top: 1rem;" class="text-muted">{{post.number_of_likes}}</p>
+                                <p style="color:black; padding-top: 1rem;" class="text-muted">{{post.number_of_likes}}
+                                </p>
                                 {% endif %}
                             </form>
                             {% else %}
