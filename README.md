@@ -11,13 +11,13 @@ This was created for a project for the Full Stack Development course hosted by [
 [Planda (Link to external site)](https://plantgram-2022.herokuapp.com/)
 
 
-## The Website
+## Scope
 
-This Website is created as a base for a fully functioning website.
+Due to the timeframe of this project it was important to keep the scope small as to maintain an achievable goal. The website in it's final form was to be fully functional with minimal bugs and a pleasant experience for the user. A list of current goals and future goals was kept by using user stories as 'issues' on github and pairing them with a basic kanban board. Seen in the image below:
 
-* This goal of the website from the beginning was to create a solid platform to move forward with. The basic layout is solid and clear which will make it easy to be improved and added to.
+![User Stories](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/user_stories.png)
 
-* The user can show off the plants that they are proud of and like other plants posted by people.
+
 ## Features
 
 ### **Design**
