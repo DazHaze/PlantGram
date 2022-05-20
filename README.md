@@ -69,6 +69,18 @@ In the image above the main "timeline" of the website can be seen. This is where
   4. Click the globe icon beside that and copy the address in the address bar.
   5. Now share this address. (Only works as long as the server is running in your gitpod window)
 
+## Issues and Bugs
+
+* Issue - Cloudinary image was not uploading when user completed the 'Add Post' form.
+
+When the user complated a valid form on the add post page a post would be created. This post would have a title and body but would not have an image. It was found that the image the user chose was in fact not in the Cloudinary database.
+
+This issue was solved by changing "post_form = PostForm(request.POST)" to "post_form = PostForm(request.POST, request.FILES)"
+
+* Issue - Heroku Github integration diabled.
+
+As detailed in the deployment section. Due to a OAuth security breach at Heroku. The Heroku team disabled all Github integration. This was solved by using Git instead. Details on how to do this were released by the Heroku team so that deployment was still possible.
+
 
 
 ## Frameworks Used
