@@ -23,7 +23,13 @@ Due to the timeframe of this project it was important to keep the scope small as
 ### **Design**
 
 
-/ To be complated /
+While designing Planda it was important to look at existing websites that had solid design principles. The most obvious example was Instagram. While being the social media giant of sharing photos and creating user interactions. Instagram at it's core follows basic design rules.
+
+While designing Planda it was important that it was kept simple and intuitive for the user. Mockups were created using Photoshop for the 'cards' that contain the user posts.
+
+Green was chosen as the main color except from white because of it's associations with plants and orange was chosen as the main accent color as it is a complimentary color to the chosen green. An example of this can be seen in the post card header.
+
+![Card Header](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/post_header.png)
 
 ### **Existing Features**
 
