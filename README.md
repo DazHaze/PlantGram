@@ -45,6 +45,8 @@ In the image above the main "timeline" of the website can be seen. This is where
 
 ![Post Detail](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/post_detail.png)
 
+A base template was used for the sites Header and Footer. The Nvabar is a responsive Navbar created using bootstrap and dynamically changes based on if the user is authenticated or not. All pages inherit this base template except the sites landing page.
+
 ----
 
 
