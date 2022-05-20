@@ -27,7 +27,15 @@ This Website is created as a base for a fully functioning website.
 
 * Landing Page
 
-  ![Landing Page](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/landing-page.png)
+![Landing Page](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/Landing-page.png)
+
+The landing page is kept simple while still bringing in common design elements that are seen throughout the website. The user can either login in or register if they do not have an account. Page is responsive using bootstrap and has been tested on many devices.
+
+![List View](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/list_view.png)
+
+In the image above the main "timeline" of the website can be seen. This is where the user can view and interact with posts. If the user likes a post in this view, or selects "Leave a comment" then they are taken to a view where only that post is visible and a text inpput to leave a comment is visible. This is called the "Post Detail" view which is seen in the image below.
+
+![Post Detail](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/post_detail.png)
 
 ----
 
