@@ -1,9 +1,12 @@
 
-Plantgram is a website created to help people show off their house plants that they are proud of. It is built using Django, Python, Javascript and HTML.
+# Wlecome to Planda!
+Planda is a growing community of plant enthusiasts that love to share their house plants. 
+Share all the plants you are proud of and talk to people about their plants by interacting on their posts. 
+Like the plants you see ? Then like them!
 
 This was created for a project for the Full Stack Development course hosted by [Code Institute](https://codeinstitute.net/ie/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAzMGNBhCyARIsANpUkzORRe5o1VJJG9_EwnX2Oxn-ftPjCcE-f8G-M0uOoLartu-8DkXRH5YaAozNEALw_wcB).
 
-[Plantgram (Link to external site)](https://plantgram-2022.herokuapp.com/)
+[Planda (Link to external site)](https://plantgram-2022.herokuapp.com/)
 
 
 ## The Website
@@ -24,7 +27,7 @@ This Website is created as a base for a fully functioning website.
 
 * Landing Page
 
-  / To be completed /
+  ![Landing Page](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/landing-page.png)
 
 ----
 
@@ -47,7 +50,8 @@ This Website is created as a base for a fully functioning website.
  / To be completed /
 
 ## Deployment
-This project was deployed using Heroku.
+This project was deployed using Heroku. During deployment Heroku had a [security breach](https://blog.heroku.com/github-integration-update) where an attacker gained access to OAuth tokens for heroku - github integration. This meant that this project, while still on Github, was also migrated to Git to be deployed using Heroku. A credit to the Heroku team for showing how to easily do this process while they work on getting the Github integration back up and running. - 20/05/2022
+
 
 ## Credits
 * [Code Institute](https://codeinstitute.net/all-access-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiAv_KMBhAzEiwAs-rX1PXOCAky8yjljHzgvSnccpkyUOvNLVGMuzG11t86weTdFdPiTfNHHhoCFuwQAvD_BwE) This project was created for Code Institute's Project 4.
