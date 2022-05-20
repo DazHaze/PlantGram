@@ -6,6 +6,8 @@ Like the plants you see ? Then like them!
 
 This was created for a project for the Full Stack Development course hosted by [Code Institute](https://codeinstitute.net/ie/5-day-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAzMGNBhCyARIsANpUkzORRe5o1VJJG9_EwnX2Oxn-ftPjCcE-f8G-M0uOoLartu-8DkXRH5YaAozNEALw_wcB).
 
+
+![Responsive](https://raw.githubusercontent.com/DazHaze/PlantGram/main/media/responsive.png)
 [Planda (Link to external site)](https://plantgram-2022.herokuapp.com/)
 
 
