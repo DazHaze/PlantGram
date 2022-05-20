@@ -61,9 +61,30 @@ In the image above the main "timeline" of the website can be seen. This is where
 
 
 
-## Validator Testing
+## Frameworks Used
 
- / To be completed /
+* [Django](https://www.djangoproject.com/)
+
+Django was used to create models, views. Link databases and use python as the backend. Django was the backbone of this project.
+
+* [Cloudinary](https://cloudinary.com/documentation/image_video_and_file_upload?utm_source=google&utm_medium=cpc&utm_campaign=Goog_Ent_Srch_PM_NonBrand_ROW&utm_content=591997517453&utm_term=&utm_id=8120040125&gclid=Cj0KCQjw-JyUBhCuARIsANUqQ_IUPR1MKKLwDhv7DBvwHl9XIn1isfAGhTDXyjLtx-6sZuigj8t3TL4aAs3kEALw_wcB)
+
+Cloudinary was used as cloud storage for the images the users uploaded for each post. It also hosts the static files for this website.
+
+* [Github](https://github.com/)
+
+Github was used to create a repository to host the files for this project. It created the ability for version control. Github was also used to create a kanban board for user stories.
+
+* [Techsini](https://techsini.com/)
+
+[Techsini multi device mockup](https://techsini.com/multi-mockup/index.php) was used to create an image of the website being responsive on multiple devices.
+
+* [Bootstrap](https://getbootstrap.com/)
+
+Bootstrap was used to keep the website responsive across all devices to insure a comfortable user experience.
+
+
+
 
 ## Deployment
 This project was deployed using Heroku. During deployment Heroku had a [security breach](https://blog.heroku.com/github-integration-update) where an attacker gained access to OAuth tokens for heroku - github integration. This meant that this project, while still on Github, was also migrated to Git to be deployed using Heroku. A credit to the Heroku team for showing how to easily do this process while they work on getting the Github integration back up and running. - 20/05/2022
