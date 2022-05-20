@@ -57,7 +57,17 @@ In the image above the main "timeline" of the website can be seen. This is where
 
 ## Testing
 
-  / To be completed /
+  Views were tested through automatic testing using Django. Switching databases was required to get these tests to funtion. The reason for this being a necessity is still not understood.
+
+  Valuable user testing was done through sharing the project with friends and family and having them report bugs in a social media group that was created and also critique design choices and accessibility.
+
+  To publicly share a non-depoloyed website using gitpod:
+
+  1. Use the 'python3 manage.py runserver'
+  2. Go to the 'Remote Explorer' tab on the left of screen (monitor icon).
+  3. Beside the 8000 port click the open padlock.
+  4. Click the globe icon beside that and copy the address in the address bar.
+  5. Now share this address. (Only works as long as the server is running in your gitpod window)
 
 
 
@@ -92,3 +102,5 @@ This project was deployed using Heroku. During deployment Heroku had a [security
 
 ## Credits
 * [Code Institute](https://codeinstitute.net/all-access-coding-challenge/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=539453915484&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiAv_KMBhAzEiwAs-rX1PXOCAky8yjljHzgvSnccpkyUOvNLVGMuzG11t86weTdFdPiTfNHHhoCFuwQAvD_BwE) This project was created for Code Institute's Project 4.
+
+* The code institute slack community!
